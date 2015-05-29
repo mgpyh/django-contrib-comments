@@ -110,7 +110,7 @@ class BaseCommentNode(template.Node):
 class CommentListNode(BaseCommentNode):
     """Insert a list of comments into the context."""
     def get_context_value_from_queryset(self, context, qs):
-        return list(qs)
+        return qs
 
 class CommentCountNode(BaseCommentNode):
     """Insert a count of comments into the context."""
